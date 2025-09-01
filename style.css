@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+
 :root {
   --primary-color: #fffaf7;
   --secondary-color: #ff6d38;
@@ -22,4 +25,80 @@
 
   --section-margin: 2rem 0;
   --container-width: 90%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style:normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-weight: 500;
+
+}
+
+section {
+  max-width:100%;
+  margin: 2rem 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+section>h2 {
+  font-family: var(--font-family-heading);
+  font-size: 2.5em;
+  color: var(--heading-color)
+}
+
+section>p {
+  color: var(--dark-color);
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: var(--btn-primary-bg);
+  color: var(--light-color);
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+button:hover {
+  background-color: var(--btn-primary-hover-bg);
+
+}
+
+nav {
+  max-width: 100%;
+  max-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a652;
+  padding: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+span.orange {
+  color: var(--secondary-color)
+}
+#logo{
+  margin-right: auto;
+}
+#navBtn{
+  margin-left: auto;
 }

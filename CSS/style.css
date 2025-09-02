@@ -51,21 +51,28 @@ section {
   margin: 2rem 0;
   padding: 2rem;
   text-align: center;
+  width: var(--container-width);
 }
 
+h1 {
+  font-family: var(--font-family-heading);
+  font-size: 3em;
+  color: var(--light-color)
+}
 section>h2 {
   font-family: var(--font-family-heading);
   font-size: 2.5em;
   color: var(--heading-color)
 }
 
-section>p {
-  color: var(--dark-color);
+p {
+  color: var();
+  line-height: 1.5;
 }
 
 button {
   padding: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   background-color: var(--btn-primary-bg);
   color: var(--light-color);
@@ -74,20 +81,17 @@ button {
   cursor: pointer;
 }
 
-
-
 button:hover {
   background-color: var(--btn-primary-hover-bg);
 
 }
-
+/*!NAV*/
 nav {
   max-width: 100%;
   max-height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #00a652;
   padding: 1rem;
   gap: 1rem;
   text-align: center;
@@ -101,4 +105,70 @@ span.orange {
 }
 #navBtn{
   margin-left: auto;
+}
+a {
+  font-weight: 500;
+    color: var(--dark-color);
+    text-decoration: inherit
+}
+
+.donation{
+  background-color: var(--btn-secondary-bg);
+
+}
+.donation:hover{
+  background-color: var(--btn-secondary-hover-bg);
+}
+
+/*!hero*/
+#hero{
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#manifeste{
+  margin: none;
+  height: 50vh;
+  width: 100%;
+  padding: 2rem;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/background.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover ;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--light-color);
+  z-index: 2;
+  position: relative;
+
+}
+
+form{
+  width: 60%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  justify-content: space-around;
+
+  z-index: 10;
+  position: absolute;
+  top: 90%;
+  left:20%;
+  background-color: var(--primary-color);
+}
+
+#inputPair,#selectPair {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+
+  width: 30%;
 }

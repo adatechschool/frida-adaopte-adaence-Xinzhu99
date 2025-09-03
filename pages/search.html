@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <script defer type="module" src="/JS/search.js"></script>
+</head>
+<body>
+    <nav>
+        <h2 id="logo">🐾Ada<span class="orange">opte</span></h2>
+        <a class="navLink" href="#"> <i data-lucide="house"></i>Accueil</a>
+        <a class="navLink" href="pages/search.html"><i data-lucide="bone"></i>J'adopte</a>
+        <a class="navLink" href="#"><i data-lucide="fish"></i>Guide de l'adoption</a>
+        <a class="navLink" href="#"><i data-lucide="squirrel"></i>Devenir bénévole</a>
+        <button id="navBtn" class="donation">Faire un don 🫶</button>
+    </nav>
+
+    <form id="form">
+            <div id="selectPair">
+                <label for="type">Type d'animal</label>
+                <select id="type" name="type">
+                    <option value="Chien">Chien</option>
+                    <option value="Chat">Chat</option>
+                    <option value="Lapin">Lapin</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </div>
+            <div id="inputPair">
+                <label for="city">Localisation</label>
+                <input id="city" name="city" placeholder="Votre ville">
+            </div>
+            <button id="research">Rechercher 🔎</button>
+    </form>
+
+    <section id="cardsSection">
+        <div id="cardWrapper">
+            <div class="card">
+                <img src="/images/florencia-potter-yxmNWxi3wCo-unsplash.jpg" alt="">
+                <p>Chien</p>
+                <h3>Florencia</h3>
+                <p>chien | 2 ans</p>
+                <p>Paris</p>
+                <p>blah blah</p>
+                <button class="meet">Rencontrer</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pagination">
+        <a class="current" href="#">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">Suivant ></a>
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

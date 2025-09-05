@@ -5,33 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search</title>
     <script defer type="module" src="/JS/search.js"></script>
+    <link rel="stylesheet" href="/CSS/search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
     <nav>
         <h2 id="logo">🐾Ada<span class="orange">opte</span></h2>
-        <a class="navLink" href="#"> <i data-lucide="house"></i>Accueil</a>
+        <a class="navLink" href="/index.html"> <i data-lucide="house"></i>Accueil</a>
         <a class="navLink" href="pages/search.html"><i data-lucide="bone"></i>J'adopte</a>
         <a class="navLink" href="#"><i data-lucide="fish"></i>Guide de l'adoption</a>
         <a class="navLink" href="#"><i data-lucide="squirrel"></i>Devenir bénévole</a>
         <button id="navBtn" class="donation">Faire un don 🫶</button>
     </nav>
-
-    <form id="form">
-            <div id="selectPair">
-                <label for="type">Type d'animal</label>
-                <select id="type" name="type">
-                    <option value="Chien">Chien</option>
-                    <option value="Chat">Chat</option>
-                    <option value="Lapin">Lapin</option>
-                    <option value="Autre">Autre</option>
-                </select>
-            </div>
-            <div id="inputPair">
-                <label for="city">Localisation</label>
-                <input id="city" name="city" placeholder="Votre ville">
-            </div>
-            <button id="research">Rechercher 🔎</button>
-    </form>
+    <div class="search-Wrapper">
+        <form id="form">
+                    <div id="selectPair">
+                        <label for="type">Type d'animal</label>
+                        <select id="type" name="type">
+                            <option value="Chien">Chien</option>
+                            <option value="Chat">Chat</option>
+                            <option value="Lapin">Lapin</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                    <div id="inputPair">
+                        <label for="city">Localisation</label>
+                        <input id="city" name="city" placeholder="Votre ville">
+                    </div>
+                    <button id="research">Rechercher 🔎</button>
+            </form>
+    </div>
+        
 
     <section id="cardsSection">
         <div id="cardWrapper">

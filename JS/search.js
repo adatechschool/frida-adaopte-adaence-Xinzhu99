@@ -11,17 +11,21 @@ function loadAnimals(currentPage, itemPerPage) {
 
         cardWrapper.innerHTML += `
           <div class="card">
-                <img src="${animals[i].imageUrl}">
-                <p>${animals[i].type}</p>
-                <h3>${animals[i].name}</h3>
-                <p>${animals[i].breed} | ${animals[i].age}</p>
-                <p>${animals[i].city}</p>
-                <p>${animals[i].description}</p>
+                <div class="pic-wrapper"><img src="${animals[i].imageUrl}"></div>
+                <div class="text-wrapper">
+                    <p class="type">${animals[i].type}</p>
+                    <h3>${animals[i].name}</h3>
+                    <p>${animals[i].breed} | ${animals[i].age}</p>
+                    <p>${animals[i].city}</p>
+                    <p class="description">${animals[i].description}</p>
+
+                </div>
                 <button class="meet">Rencontrer</button>
+
             </div>
         `
 
     };
 };
 
-loadAnimals(1,4);
+loadAnimals(1,8);

@@ -138,19 +138,20 @@ a:hover{
 
 #cardWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
     gap:2rem;
     padding: 2rem 5rem;
 
     .card{
         display: flex;
         flex-direction: column;
-        height: 90vh;
+        height: 80vh;
         box-shadow: var(--shadow-xl);
         padding-bottom: 1rem;
+        border-radius: var(--border-radius);
+        overflow: hidden;
 
         .pic-wrapper{
-            background-color: #8584ff;
             height: 40%;
 
             > img{
@@ -161,9 +162,10 @@ a:hover{
 
         }
         .text-wrapper{
-            display: flex;
-            flex-direction: column;
-            margin: 2rem;
+            flex: 1;
+            overflow-y: scroll;
+            margin: 1rem 2rem;
+
 
             >h3{
                 color:var(--btn-primary-hover-bg);

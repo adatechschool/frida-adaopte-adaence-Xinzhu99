@@ -313,14 +313,39 @@ footer{
         font-size: 2rem;
         color: var(--secondary-color); 
       }
-    a{
-      color: gray;
+
+
+    #icones{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+      & > a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border-radius: 50%;
+        transition: all 0.3s;
+        text-decoration: none;
+        }
+      & > a:hover{
+        background-color: var(--accent-color);
+        transform: translateY(-3px);        }
+      }
+    .useful-link{
+      color: #999;
+      margin-bottom: 1rem;
+      transition: color 0.3s;
     }
-    :hover{
+    .useful-link:hover{
       color: white;
     }
 
-  }
+    }
   }
 
   .copyright{

@@ -201,10 +201,9 @@ a:hover{
     border-radius: var(--border-radius);
     color: var(--accent-color);
 
-      &.current{
-      background-color:var(--accent-color);
-      color: var(--light-color);
-      }
+    .current{
+      
+    }
   }
     a:hover{
     background-color:var(--accent-color);

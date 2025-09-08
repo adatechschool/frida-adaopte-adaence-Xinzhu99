@@ -188,6 +188,30 @@ a:hover{
     }
 }
 
+/*! pagination*/
+#pagination{
+  display: flex;
+  margin:1rem;
+  gap: 1rem;
+  justify-content: center;
+
+  > a{
+    background-color:var(--light-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    color: var(--accent-color);
+
+      &.current{
+      background-color:var(--accent-color);
+      color: var(--light-color);
+      }
+  }
+    a:hover{
+    background-color:var(--accent-color);
+    color: var(--light-color);
+  }
+}
+
 /*!footer*/
 
 footer{

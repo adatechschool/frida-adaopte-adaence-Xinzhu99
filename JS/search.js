@@ -21,15 +21,13 @@ function createAnimalTypeList(){
 }
 createAnimalTypeList();
 
-let paremString = window.location.search;
-let searchParams = new URLSearchParams(paremString);
-let typeValue = searchParams.get("type");
+let paremString = window.location.search;                                      //!window.location.search permet de récupérer les string url après le "?"
+let searchParams = new URLSearchParams(paremString);                           //! URLsearchparams() permet de transformer le string récupérer en objet
+let typeValue = searchParams.get("type");                                      
 let cityValue = searchParams.get("city");
-console.log(typeValue)
-console.log(cityValue)
 
 
-function transferInput(typeValue,cityValue){
+function searchAnimals(typeValue,cityValue){
     if (!typeValue && !cityValue){
         loadAnimals(animals);
     } else {
@@ -50,7 +48,7 @@ function transferInput(typeValue,cityValue){
         };
     };
 };
-transferInput(typeValue,cityValue);
+searchAnimals(typeValue,cityValue);
 
 function loadAnimals(animals) {
     cardWrapper.innerHTML = ''
@@ -75,11 +73,8 @@ function loadAnimals(animals) {
     };
 };
 
-
 form.addEventListener("submit",(event) => {
     event.preventDefault();
-
-    transferInput(type.value,city.value)
-
+    searchAnimals(type.value,city.value);
 });
 

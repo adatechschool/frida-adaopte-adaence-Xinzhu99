@@ -8,36 +8,36 @@ const type = document.querySelector("#type");
 const test = document.querySelector("#test");
 
 
-
-form.addEventListener("submit",(event) => {
-    event.preventDefault();
-
-    var selectedAnimals= []
+function createAnimalTypeList(){
+    let animalTypeList= new Set();                                               //!new set permet de créer un objet sans duplicata*/
     for (const animal of animals){
- 
-        if ((animal.city.toLowerCase() === city.value.toLowerCase() || city.value === '')  
-            && (animal.type === type.value || type.value === 'Tout')){
-                selectedAnimals.push(animal)
-            }else{
-                test.innerHTML="erreur"
-            }
-    
+        animalTypeList.add(animal.type);
     }
-    loadAnimals(selectedAnimals)
-
-})
-
-function createAnimalList(){
-    let animalList= new Set();                                               //!new set permet de créer un objet sans duplicata*/
-    for (const animal of animals){
-        animalList.add(animal.type)
-    }
-    for (const item of animalList){
+    for (const item of animalTypeList){
            type.innerHTML += `
          <option value="${item}">${item}</option>
     `
     }
 }
+createAnimalTypeList();
+
+
+
+form.addEventListener("submit",(event) => {
+    event.preventDefault();
+
+    var selectedAnimals=[];
+    for (const animal of animals){
+        if ((animal.city.toLowerCase() === city.value.toLowerCase() || city.value === "")  
+            && (animal.type === type.value || type.value === "Tout")){
+            selectedAnimals.push(animal);
+        };
+    };
+    loadAnimals(selectedAnimals);
+    if (selectedAnimals.length===0){
+        test.innerHTML="ville non valide";
+    };
+});
 
 
 function loadAnimals(animals) {
@@ -64,5 +64,4 @@ function loadAnimals(animals) {
 };
 
 loadAnimals(animals);
-createAnimalList();
 

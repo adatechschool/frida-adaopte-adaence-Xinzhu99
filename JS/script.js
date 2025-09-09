@@ -1,28 +1,18 @@
+import { animals } from "/data/animals.js";
+
+function createAnimalTypeList(){
+    let animalTypeList= new Set();                                               //!new set permet de créer un objet sans duplicata*/
+    for (const animal of animals){
+        animalTypeList.add(animal.type);
+    }
+    for (const item of animalTypeList){
+           type.innerHTML += `
+         <option value="${item}">${item}</option>
+    `
+    }
+}
+createAnimalTypeList();
 
 
 
 
-
-
-/*
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  cocktailContainer.innerHTML = ""
-
-  const savedScript = localStorage.getItem(AGE_KEY);
-  ageAlreadyChecked = savedScript ? JSON.parse(savedScript) : false;
-
-
-  const inputValue = input.value.trim();
-
-  if (!inputValue) {
-    cocktailContainer.innerHTML = `<p class=errorIngredient> Please tap an ingredient or a cocktail name 🍋🍸</p>`;
-    hide(form);
-    return;
-  }
-  loadCocktailFetch(inputValue);
-  hide(form);
-  input.value = "";
-});
-*/

@@ -5,7 +5,7 @@ const form = document.querySelector("#form");
 const cardWrapper = document.querySelector("#cardWrapper");
 const city = document.querySelector("#city");
 const type = document.querySelector("#type");
-const test = document.querySelector("#test");
+const message = document.querySelector("#message");
 
 
 function createAnimalTypeList(){
@@ -21,24 +21,36 @@ function createAnimalTypeList(){
 }
 createAnimalTypeList();
 
+let paremString = window.location.search;
+let searchParams = new URLSearchParams(paremString);
+let typeValue = searchParams.get("type");
+let cityValue = searchParams.get("city");
+console.log(typeValue)
+console.log(cityValue)
 
 
-form.addEventListener("submit",(event) => {
-    event.preventDefault();
-
-    var selectedAnimals=[];
-    for (const animal of animals){
-        if ((animal.city.toLowerCase() === city.value.toLowerCase() || city.value === "")  
-            && (animal.type === type.value || type.value === "Tout")){
-            selectedAnimals.push(animal);
+function transferInput(typeValue,cityValue){
+    if (!typeValue && !cityValue){
+        loadAnimals(animals);
+    } else {
+        var selectedAnimals=[];
+        for (const animal of animals){
+            if ((animal.city.toLowerCase() === cityValue.toLowerCase() || cityValue === "")  
+                && (animal.type === typeValue || typeValue === "Tout")){
+                selectedAnimals.push(animal);
+            };
+        };
+        loadAnimals(selectedAnimals);
+        if (selectedAnimals.length===0){
+            message.style.display = "block";
+            message.innerHTML="Ville non valide";
+        }else{
+            message.style.display = "block";
+            message.innerHTML=`${selectedAnimals.length} résultats trouvés.`
         };
     };
-    loadAnimals(selectedAnimals);
-    if (selectedAnimals.length===0){
-        test.innerHTML="ville non valide";
-    };
-});
-
+};
+transferInput(typeValue,cityValue);
 
 function loadAnimals(animals) {
     cardWrapper.innerHTML = ''
@@ -63,5 +75,11 @@ function loadAnimals(animals) {
     };
 };
 
-loadAnimals(animals);
+
+form.addEventListener("submit",(event) => {
+    event.preventDefault();
+
+    transferInput(type.value,city.value)
+
+});
 

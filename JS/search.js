@@ -77,4 +77,17 @@ form.addEventListener("submit",(event) => {
     event.preventDefault();
     searchAnimals(type.value,city.value);
 });
-
+//ci-dessous la version avec un tableau json 
+// const getData = async () => {
+//     try {
+//         const response = await fetch("/data/data.json");
+//         const data = await response.json();
+        
+//         console.log(data);
+//     } catch (error) {
+//         console.log("can't reach the local json file")
+        
+//     };
+    
+// };
+// getData();

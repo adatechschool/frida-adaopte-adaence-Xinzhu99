@@ -155,7 +155,8 @@ a:hover{
         box-shadow: var(--shadow-xl);
         padding-bottom: 1rem;
         border-radius: var(--border-radius);
-        overflow: hidden;
+        /*! Cache ce qui dépasse de la carte */
+        overflow: hidden;                           
         max-width: 600px;
 
         .pic-wrapper{
@@ -169,7 +170,9 @@ a:hover{
 
         }
         .text-wrapper{
+            /*! Prend tout l’espace vertical restant sous l’image */
             flex: 1;
+            /* !Active le scroll vertical si le texte est trop long */
             overflow-y: scroll;
             margin: 1rem 2rem;
 
@@ -208,7 +211,7 @@ a:hover{
     border-radius: var(--border-radius);
     color: var(--accent-color);
 
-    .current{
+    &.current{
     background-color:var(--accent-color);
     color: var(--light-color);
     }

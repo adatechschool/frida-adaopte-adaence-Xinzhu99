@@ -31,7 +31,7 @@ function searchAnimals(typeValue,cityValue){
     if (!typeValue && !cityValue){
         loadAnimals(animals);
     } else {
-        var selectedAnimals=[];
+        let selectedAnimals=[];
         for (const animal of animals){
             if ((animal.city.toLowerCase() === cityValue.toLowerCase() || cityValue === "")  
                 && (animal.type === typeValue || typeValue === "Tout")){
@@ -63,13 +63,10 @@ function loadAnimals(animals) {
                     <p>${animal.breed} | ${animal.age}</p>
                     <p>${animal.city}</p>
                     <p class="description">${animal.description}</p>
-
                 </div>
                 <button class="meet">Rencontrer</button>
-
             </div>
         `
-
     };
 };
 

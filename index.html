@@ -23,19 +23,13 @@
   <body>
     <nav>
       <h2 id="logo">🐾Ada<span class="orange">opte</span></h2>
-      <a class="navLink" href="#"> <i data-lucide="house"></i>Accueil</a>
-      <a class="navLink" href="pages/search.html"
-        ><i data-lucide="bone"></i>J'adopte</a
-      >
-      <a class="navLink" href="#"
-        ><i data-lucide="fish"></i>Guide de l'adoption</a
-      >
-      <a class="navLink" href="/pages/volunteer.html"
-        ><i data-lucide="squirrel"></i>Devenir bénévole</a
-      >
+      <a class="navLink" href="#"> <i data-lucide="house"></i>Accueil</a>                               <!--utiliser lucide pour les icones au lieu de svg-->
+      <a class="navLink" href="pages/search.html"><i data-lucide="bone"></i>J'adopte</a>
+      <a class="navLink" href="#"><i data-lucide="fish"></i>Guide de l'adoption</a>
+      <a class="navLink" href="/pages/volunteer.html"><i data-lucide="squirrel"></i>Devenir bénévole</a>
       <button id="navBtn" class="donation">Faire un don 🫶</button>
     </nav>
-
+<!--partie bannière et bar de recherche-->
     <section id="hero">
       <div id="manifeste">
         <h1>Donnons-leur autant qu'ils nous apportent</h1>
@@ -46,21 +40,22 @@
         </p>
       </div>
 
-    <div class="search-Wrapper">
-        <form id="form" method="GET" action="pages/search.html">  
-                    <div id="selectPair">
-                        <label for="type">Type d'animal</label>
-                        <select id="type" name="type">
-                            <option value="Tout">Tout</option>
-                        </select>
-                    </div>
-                    <div id="inputPair">
-                        <label for="city">Localisation</label>
-                        <input id="city" name="city" placeholder="Votre ville">
-                    </div>
-                    <button id="research">Rechercher 🔎</button>
-            </form>
-    </div>
+      <div class="search-Wrapper">
+        <form id="form" method="GET" action="pages/search.html">  <!-- pour switcher sur la page search avec la sumission du formulaire-->
+          <div id="selectPair">
+            <label for="type">Type d'animal</label>
+            <!--menu déroulant "select" avec un choix par défaut "Tout" le reste -->
+            <select id="type" name="type">
+              <option value="Tout">Tout</option>
+            </select>
+          </div>
+          <div id="inputPair">
+            <label for="city">Localisation</label>
+            <input id="city" name="city" placeholder="Votre ville">
+          </div>
+          <button id="research">Rechercher 🔎</button>
+        </form>
+      </div>
     </section>
 
     <section id="gallery">
@@ -70,12 +65,7 @@
         Chaque photo raconte une histoire et un espoir.
       </p>
       <div id="grid">
-        <div class="gridPic" id="animal1">
-          <div class="animalOverlay">
-            <h3>Mia</h3>
-            <p>Chat. 2ans</p>
-          </div>
-        </div>
+        <div class="gridPic" id="animal1"></div>
         <div class="gridPic" id="animal2"></div>
         <div class="gridPic" id="animal3"></div>
         <div class="gridPic" id="animal4"></div>
@@ -214,7 +204,7 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>                                    <!--insérer le script de lucide pour utiliser les icones correctement-->
     <script>
       lucide.createIcons();
     </script>

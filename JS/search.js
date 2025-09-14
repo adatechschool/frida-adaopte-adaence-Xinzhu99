@@ -1,4 +1,4 @@
-import { animals } from "/data/animals.js";
+import { animals } from "../data/animals.js";
 
 
 const form = document.querySelector("#form");

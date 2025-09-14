@@ -1,7 +1,7 @@
 import { animals } from "../data/animals.js";
 /* créer un menu déroulant dynamiquement*/
 function createAnimalTypeList(){
-    let animalTypeList= new Set();   /*set permet de créer un tableau sans duplicata*/                                              //!new set permet de créer un objet sans duplicata*/
+    let animalTypeList= new Set();                                                 //!new set permet de créer un objet sans duplicata*/
     for (const animal of animals){
         animalTypeList.add(animal.type);
     };
